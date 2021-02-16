@@ -6,8 +6,7 @@
 Future Tic Tac Toe 
 
 ## Hardware Necessario
-
-Placa de madeira              
+              
 Fita LED endereçável            
 Sensores TCRT 5000
 Resistência 15k Ω                       
