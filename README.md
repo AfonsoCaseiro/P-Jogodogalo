@@ -13,7 +13,7 @@ Future Tic Tac Toe
 *Resistência 15k Ω                       
 *Resistência 330 Ω                  
 *Resistência 10k Ω 
-* Fio multifilar                     
+*Fio multifilar                     
 *Arduíno Uno R3                      
 *ATMega328p
 
