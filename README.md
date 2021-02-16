@@ -3,18 +3,25 @@
 
 # Nome do projeto
 
-Descricao de 1 linha do projeto.
+Future Tic Tac Toe 
 
 ## Hardware Necessario
 
-* Arduino Board
-* Servo Motor
+*Placa de madeira              
+*Fita LED endereçável            
+*Sensores TCRT 5000
+*Resistência 15k Ω                       
+*Resistência 330 Ω                  
+*Resistência 10k Ω 
+* Fio multifilar                     
+*Arduíno Uno R3                      
+*ATMega328p
 
 ## Circuito
 
-Breve descricao do circuito com imagem.
+O nosso atual circuito do Arduíno
+ ![](doc/circuito.png)
 
-![](doc/circuito.png)
 
 
 
