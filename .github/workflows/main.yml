@@ -1,0 +1,82 @@
+# Workflow basico das github actions
+
+name: CI
+
+# Controla quando executar a action. 
+# neste caso updates ao ficheiro das actions
+# ou alteracoes na pasta src
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/main.yml'
+      - 'src/**'
+
+  push:
+    paths:
+      - '.github/workflows/main.yml'
+      - 'src/**'
+
+  # Permite executar manualmente da tab Actions
+  workflow_dispatch:
+
+# Um workflow e constituido por varios trabalhos que podem correr sozinhos ou em paralelo
+jobs:
+  # Este workflow contem um unico trabalho chamado "build"
+  build:
+    # Plataforma onde o trabalho vai executar
+    runs-on: ubuntu-latest
+
+    # Steps representam a sequencia de tarefas 
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      #Executa o Lint
+      - name: Executa a verificacao de codigo
+        uses: arduino/arduino-lint-action@v1
+        with:
+          path: ./src/
+          compliance: permissive
+          project-type: sketch
+          recursive: true
+           
+      #Executa Arduino CLI
+      - name: A Preparar Arduino CLI
+        uses: arduino/setup-arduino-cli@v1.1.1
+
+# We then install the platform, which one will be determined
+      # dynamically by the build matrix.
+      - name: Instala platforma
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+          
+      # Instala bibliotecas do Arduino Base   
+      #- name: Instala bibliotecas
+      #  run: |
+      #    arduino-cli lib install "Servo"
+       
+  #Copia as bibliotecas da pasta bibliotecas
+      - name: Instala bibliotecas da pasta bibliotecas
+        run: |
+          mkdir -p "$HOME/Arduino/libraries"
+          ln -s "$PWD/bibliotecas" "$HOME/Arduino/libraries/."    
+         
+  
+      # Finally, we compile the sketch, using the FQBN that was set
+      # in the build matrix.
+      #- name: Compilar Sketch
+      #  run: arduino-cli compile --fqbn arduino:avr:uno ./src
+# Compile all *.ino files for the Arduino Uno
+      - name: Compilar Sketch independente nome ficheiro
+        run: | 
+          for f in **/*.ino ; do
+          echo $f
+          arduino-cli compile -b arduino:avr:uno $f
+          done
+#          
+#      - name: Compilar Sketch2
+#        run: arduino-cli compile --fqbn arduino:avr:uno ./src/*.ino
+#      - name: Compilar Sketch3
+#        run: arduino-cli compile --fqbn arduino:avr:uno ./src/*-src.ino            
+            
