@@ -8,12 +8,19 @@ Future Tic Tac Toe
 ## Hardware Necessario
               
 Fita LED endereçável            
+
 Sensores TCRT 5000
+
 Resistência 15k Ω                       
+
 Resistência 330 Ω                  
+
 Resistência 10k Ω 
+
 Fio multifilar                     
+
 Arduíno Uno R3                      
+
 ATMega328p
 
 ## Circuito
