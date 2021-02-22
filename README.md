@@ -34,5 +34,7 @@ O nosso atual circuito do Arduíno
 
 ## Esquema
 
+E aqui temos uns exemplos de esquemas e imagens do projeto Future Tic Tac Toe 
+
 ![](doc/ESQUEMA DE LIGAÇÕES DOS SENSORES.PNG)
 
