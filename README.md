@@ -26,5 +26,5 @@ O nosso atual circuito do Arduíno
 
 ## Esquema
 
-![](doc/esquema.png)
+![](doc/ESQUEMA DE LIGAÇÕES DOS SENSORES.PNG)
 
