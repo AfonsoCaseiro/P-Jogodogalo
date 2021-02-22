@@ -1,5 +1,5 @@
 # Arduino-actions
-![CI](https://github.com/merc-epro/Arduino-actions/workflows/CI/badge.svg)
+![CI](https://github.com/merc-epro/P-Jogodogalo/workflows/CI/badge.svg)
 
 # Nome do projeto
 
@@ -26,6 +26,7 @@ ATMega328p
 ## Circuito
 
 O nosso atual circuito do Arduíno
+ 
  ![](doc/Capturar.PNG)
 
 
