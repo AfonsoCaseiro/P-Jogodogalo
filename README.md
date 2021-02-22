@@ -19,7 +19,7 @@ ATMega328p
 ## Circuito
 
 O nosso atual circuito do Arduíno
- ![](doc/Captura.PNG)
+ ![](doc/Capturar.PNG)
 
 
 
