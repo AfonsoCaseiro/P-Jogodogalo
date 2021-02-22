@@ -1,5 +1,5 @@
 # Arduino-actions
-![CI](https://github.com/merc-epro/P-Jogodogalo/workflows/CI/badge.svg)
+![CI](https://github.com/AfonsoCaseiro/P-Jogodogalo/workflows/CI/badge.svg)
 
 # Nome do projeto
 
@@ -36,5 +36,5 @@ O nosso atual circuito do Arduíno
 
 E aqui temos uns exemplos de esquemas e imagens do projeto Future Tic Tac Toe 
 
-![](doc/ESQUEMA DE LIGAÇÕES DOS SENSORES.PNG)
+![](doc/ESQUEMA.PNG)
 
