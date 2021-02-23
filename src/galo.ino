@@ -465,7 +465,7 @@ void Joga_nr1()
 {
     if(placa_jogo[3]==0)
         {
-         Serial.println("detetada jogada no: 3");
+         Serial.println(F("detetada jogada no: 3"));
           placa_jogo[3]=1;
           //Codigo para acender fita com o numero
           //Jogador 1 pode ser O
@@ -475,7 +475,7 @@ void Joga_nr2()
 {
      if(placa_jogo[4]==0)
         {
-         Serial.println("detetada jogada: 4");
+         Serial.println(F("detetada jogada: 4"));
           placa_jogo[4]=2;
           // Aqui vamos colocar o codigo para acender os leds
           //Jogador 2 pode ser X
@@ -485,7 +485,7 @@ void Joga_nr2()
 void desenha_placa()
 {
   int i=0;
-  Serial.print("Placa Jogo: [");
+  Serial.print(F("Placa Jogo: ["));
   for(i=0;i<9;i++)
   {
     Serial.print(placa_jogo[i]);
